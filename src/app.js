@@ -2,6 +2,10 @@ const express = require('express');
 const { engine } = require('express-handlebars');
 const path = require('path');
 const route = require('./routes');
+const db = require('./config/db');
+
+//Connect to DB
+db.connect();
 
 const morgan = require('morgan');
 const app = express();
